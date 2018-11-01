@@ -10,7 +10,26 @@ client = gspread.authorize(creds)
 
 sheet = client.open("Point Update Tester").sheet1
 
-names_list = []
+#####################################################################################
 
-names_list = sheet.col_values(1)
-print(names_list)
+class GAPmember:
+    """The GAPmember class initilaizes a member object with name, email, gross, and net balances"""
+    def __init__(self, full_name, email, gross, net):
+        self.full_name = name
+        self.email = email
+        self.gross = gross_bal
+        self.net = net_bal
+
+    def newMember():
+        """The newMember() method is used to alphabetically input a new member object into the spreadsheet"""
+    #End of newMember()
+
+    def removeMember():
+        """The removeMembe() method is used to remove a member from the spreadsheet and delete the row""
+
+
+    def addPoints():
+
+    def removePoints():
+
+    def lookup():
