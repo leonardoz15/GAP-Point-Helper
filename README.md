@@ -4,10 +4,10 @@ I created this short Python program to assist me in managing the point reward sy
 Installation:
 -------------
 Requirements: Python 2.7+ or 3+
-This program also requires gspread to operate
+This program also requires [pygsheets](https://github.com/nithinmurali/pygsheets) to operate
 
 ```
-pip install gspread
+pip install pygsheets
 ```
 Basic Usage:
 -----------
@@ -17,7 +17,7 @@ Basic Usage:
 
 3. If done correctly, you can use any spreadsheet in your google drive by naming it in this line:
 ```python
-sheet = client.open("Point Update Tester").sheet1
+sheet = client.open("Point Update Tester")
 ```
 Examples:
 ---------
