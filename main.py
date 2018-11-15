@@ -29,6 +29,7 @@ def updateList(full_list):
 
 def createList():
     """The createList function builds a list of member objects from the google sheet"""
+    import operator
     cell_list = sheet.get_row(1, returnas='cells')
     rows = len(cell_list) - 2  #To account for top two rows
     member_list = []
@@ -41,6 +42,7 @@ def createList():
         member = GAPmember(full_name, email, gross_bal, net_bal)
         member_list.append(member)
         q + 1
+    #add alphabetize using sort member_list.sort(key=operator.attrgetter('self.last_name'))
     return member_list
 #End of createList() function
 
