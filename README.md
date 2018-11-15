@@ -9,6 +9,11 @@ This program also requires [pygsheets](https://github.com/nithinmurali/pygsheets
 ```
 pip install pygsheets
 ```
+or
+```
+pip install https://github.com/nithinmurali/pygsheets/archive/master.zip
+```
+
 Basic Usage:
 -----------
 1. First you need to obtain [OAuth2 credentials from Google Developers Console](https://gspread.readthedocs.io/en/latest/oauth2.html)
