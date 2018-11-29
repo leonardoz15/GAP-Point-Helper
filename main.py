@@ -46,21 +46,23 @@ def createList():
     return member_list
 #End of createList() function
 
-
 #####################################################################################
 
 import pygsheets
 # from oauth2client.service_account import ServiceAccountCredentials
+def main():
+    # Use creds to create a client to interact with Google Drive API
+    client = pygsheets.authorize(service_file='client_secret.json')
 
-# Use creds to create a client to interact with Google Drive API
-client = pygsheets.authorize(service_file='client_secret.json')
+    sheet = client.open("Point Update Tester").sheet1
 
-sheet = client.open("Point Update Tester").sheet1
+    print("Hello, starting out")
 
-print("Hello, starting out")
+    member_list = createList()
+    member_list = updateList(member_list)
 
-member_list = createList()
-member_list = updateList(member_list)
+if __name__ == '__main__':
+    main()
     # def newMember():
     #     """The newMember() method is used to alphabetically input a new member object into the spreadsheet"""
     # #End of newMember()
