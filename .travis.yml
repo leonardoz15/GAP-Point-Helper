@@ -1,8 +1,21 @@
 language: python
 python:
-  - "2.7"
-  - "3.4"
-  - "3.5"
   - "3.6"
+  
+#Markdown linter for README.md  
+before_install:
+  - gem install mdl
+  
 install:
-  pip install -r https://github.com/nithinmurali/pygsheets/archive/master.zip
+  pip install -r pygsheets
+
+script:
+    - mdl README.md
+    
+before_script: cd src
+
+script:
+  - python main.py
+  
+after_success:
+  coveralls
