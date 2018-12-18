@@ -3,12 +3,9 @@ python:
   - "3.6"
   
 #Markdown linter for README.md  
-before_install:
+install:
   - gem install mdl
   
-install:
-  pip install -r https://github.com/nithinmurali/pygsheets/archive/master.zip
-
 script:
     - mdl README.md
     
