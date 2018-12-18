@@ -9,7 +9,7 @@ def format():
         c += 1
 #end of format()
 
-def addMember(length, last_list):
+def addMember(last_list):
     #Alphabetically add a new member
     print("To add a new member, please specify the following: ")
     fname_new = input("First Name:    ").lower()
@@ -80,16 +80,14 @@ def main():
         first = input("Do you need to format? This may take a few minutes for longer lists. (yes / no) ").lower() #to cut down on exec time
         if first == "yes":
             format()
-            addMember(length,last_list) #Hard-coded as the only method currently
-            length += 1
+            addMember(last_list) #Hard-coded as the only method currently
         elif first == "no":
-            addMember(length,last_list) #Hard-coded as the only method currently
-            length += 1
+            addMember(last_list) #Hard-coded as the only method currently
         another = input("Would you like to add another? (yes / no) ").lower()
         if another == "no":
             break
 
     print("Thanks for using the GAP Point Helper")
-    
+
 if __name__ == '__main__':
     main()
