@@ -1,3 +1,6 @@
+#####GAP POINT HELPER#####
+#Author: Zachary Leonardo
+
 def format():
     #Capitilizes and sorts all names by last name, then updates the sheet
     c = 0
