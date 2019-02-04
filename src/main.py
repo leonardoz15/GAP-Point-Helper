@@ -42,6 +42,7 @@ def main():
     #Main method
     import addMember
     import format
+    import removeMember
     #Choose which operation to perform: (Only add member at the moment)
     #TODO: add methods for adding and removing points
     while True:
@@ -49,9 +50,13 @@ def main():
         if first == "yes":
             print("Formatting " + file_name)
             format.formatSheet()
-            addMember.addMember(last_list) #Hard-coded as the only method currently
-        elif first == "no":
-            addMember.addMember(last_list) #Hard-coded as the only method currently
+        user_action = input("Choose an action ::\n add\nremove")
+        if user_action.lower() == "add":
+            addMember.addMember(last_list)
+        elif user_action.lower() == "remove":
+            removeMember.removeMember()
+        else:
+
         another = input("Would you like to add another? (yes / no) ").lower()
         if another == "no":
             break
