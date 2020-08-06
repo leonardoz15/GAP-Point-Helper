@@ -3,6 +3,7 @@
 ##############################################################################
 import pygsheets
 # Use creds to create a client to interact with Google Drive API
+# please add your own client_secret.json
 client = pygsheets.authorize(service_file='secret/client_secret.json')
 print("Welcome to the GAP Point Helper!")
 file_name = input("What is the name of the google sheets file? ")
